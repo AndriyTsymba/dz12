@@ -1,13 +1,23 @@
-#3
-class Car:
-    def __init__(self, brand, model, year):
-        self.brand = brand
-        self.model = model
-        self.year = year
+#4
+class Bank:
+    def __init__(self):
+        self.customers = []
 
-    def info(self):
-        print(f"Марка {self.brand}, Модель {self.model}, Рік  {self.year}")
-car1 = Car("Porshe", "Taycan", 2021)
-car1.info()
-car2 = Car("Maclaren", "P1", 2023)
-car2.info()
+    def add_customer(self, customer):
+        self.customers.append(customer)
+
+    def get_total_balance(self):
+        total_balance = 0
+        for customer in self.customers:
+            total_balance += customer.balance
+        return total_balance
+class BankAccount:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+bank = Bank()
+customer1 = BankAccount("Slavik", 1500)
+customer2 = BankAccount("Igor", 10000)
+bank.add_customer(customer1)
+bank.add_customer(customer2)
+print(bank.get_total_balance())
