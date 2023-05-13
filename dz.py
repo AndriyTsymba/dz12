@@ -1,15 +1,13 @@
-#2
-class Rectangle:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
-    def area(self):
-        return self.width * self.height
-    def perimeter(self):
-        return 2 * (self.width + self.height)
-a = Rectangle(5, 10)
-print(a.area())
-print(a.perimeter())
-b = Rectangle(6, 9)
-print(b.area())
-print(b.perimeter())
+#3
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def info(self):
+        print(f"Марка {self.brand}, Модель {self.model}, Рік  {self.year}")
+car1 = Car("Porshe", "Taycan", 2021)
+car1.info()
+car2 = Car("Maclaren", "P1", 2023)
+car2.info()
